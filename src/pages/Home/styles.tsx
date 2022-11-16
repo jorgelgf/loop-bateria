@@ -51,25 +51,11 @@ export const DivSection1 = styled.div`
 
 export const DivPlayer = styled.div`
   display: flex;
-`;
-export const ItemPlayer = styled.div`
-  width: 200px;
-  margin-right: 49px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 `;
-export const ContainerItem = styled.div`
-  font-family: "Ubuntu Mono";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 14px;
-  color: ${themes.SecondaryColor};
-  margin-top: 5px;
-  margin-bottom: 16px;
-`;
+
 export const DivSection2 = styled.div`
   width: auto;
   font-family: "Ubuntu Mono";
@@ -99,11 +85,4 @@ export const DivSection2 = styled.div`
     font-size: 14px;
     line-height: 14px;
   }
-`;
-
-export const ContainerSlowAndFast = styled.div`
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
