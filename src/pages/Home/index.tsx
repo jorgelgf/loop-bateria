@@ -6,6 +6,7 @@ import ButtonVariation from "../../components/Button/ButtonVariation";
 import Header from "../../components/Header";
 import * as S from "./styles";
 import Layout from "../../components/Layout";
+import { themes } from "../../styles/themes";
 
 export default function Home() {
   const [modal, setModal] = useState(false);
@@ -33,22 +34,27 @@ export default function Home() {
     <S.Container>
       <Layout>
         <Header />
-        <S.Variation>VARIAÇÕES</S.Variation>
         <S.DivButton>
-          <ButtonVariation onClick={handleClickI}>I</ButtonVariation>
-          <ButtonVariation onClick={handleClickII}>II</ButtonVariation>
-          <ButtonVariation>III</ButtonVariation>
-          <ButtonVariation>IV</ButtonVariation>
+          <ButtonVariation
+            style={{ backgroundColor: `${themes.bgButtonI}` }}
+            onClick={handleClickI}
+          >
+            I
+          </ButtonVariation>
+          <ButtonVariation
+            style={{ backgroundColor: `${themes.bgButtonII}` }}
+            onClick={handleClickII}
+          >
+            II
+          </ButtonVariation>
+          <ButtonVariation style={{ backgroundColor: `${themes.bgButtonIII}` }}>
+            III
+          </ButtonVariation>
+          <ButtonVariation style={{ backgroundColor: `${themes.bgButtonIV}` }}>
+            IV
+          </ButtonVariation>
         </S.DivButton>
-        <S.DivSection1>
-          <span>ESTILO</span>
-          <span>SELEÇÃO</span>
-          {modal && <Modal>Meu modal</Modal>}
-        </S.DivSection1>
-        <S.DivSection2>
-          <button style={{ borderRight: "1px solid #2E062A" }}>POP</button>
-          <button>POP1</button>
-        </S.DivSection2>
+
         <S.DivPlayer>
           <ReactAudioPlayer
             onCanPlayThrough={handleMusic}
@@ -59,6 +65,15 @@ export default function Home() {
             loop={true}
           />
         </S.DivPlayer>
+        <S.DivSection1>
+          <span>ESTILO</span>
+          <span>SELEÇÃO</span>
+          {modal && <Modal>Meu modal</Modal>}
+        </S.DivSection1>
+        <S.DivSection2>
+          <button style={{ borderRight: "1px solid #2E062A" }}>POP</button>
+          <button>POP1</button>
+        </S.DivSection2>
       </Layout>
     </S.Container>
   );

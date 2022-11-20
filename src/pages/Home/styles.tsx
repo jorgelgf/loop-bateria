@@ -9,26 +9,13 @@ export const Container = styled.div`
   background-color: ${themes.PrimaryColor};
 `;
 
-export const Variation = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${themes.SecondaryColor};
-  font-family: "Ubuntu Mono";
-  font-style: normal;
-  font-weight: 700;
-  margin-top: 91px;
-`;
 export const DivButton = styled.div`
   margin-top: 11px;
   height: auto;
-  width: auto;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-right: 49px;
-  margin-left: 49px;
+  justify-content: center;
 `;
 
 export const DivSection1 = styled.div`
